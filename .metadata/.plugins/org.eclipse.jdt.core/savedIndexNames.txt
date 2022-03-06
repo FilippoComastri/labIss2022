@@ -1,0 +1,23 @@
+INDEX VERSION 1.131+C:\Users\comas\Desktop\Universita\1ANNO_MAGISTRALE\IngegneriaSistemiSoftware\laboratorio\3 marzo 2022\.metadata\.plugins\org.eclipse.jdt.core
+163153126.index
+3751964753.index
+1855168677.index
+1221852205.index
+2214231696.index
+2889253600.index
+1755492555.index
+3742897019.index
+2001180146.index
+3523413741.index
+1367843388.index
+3812495712.index
+723259699.index
+2229363486.index
+1380673665.index
+1865797976.index
+2696724804.index
+1614909580.index
+1357625094.index
+2328269416.index
+3749649077.index
+1971710107.index

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;it.unibo.radarSystem22/userDocs/SchedaIss.html&apos; to &apos;radarSytem22.html&apos;" description="Rename resource &apos;SchedaIss.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="userDocs/SchedaIss.html" name="radarSytem22.html" stamp="1646310741224" updateReferences="true"/>
+</session>
