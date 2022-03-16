@@ -1,7 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/source&lt;it.unibo.radarSystem22.domain.mock{LedMock.java[LedMock" modifiers="1" timestamp="1647259004979"/>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/C:\/Users\/comas\/Desktop\/Universita\/1ANNO_MAGISTRALE\/IngegneriaSistemiSoftware\/labIss2022\/unibolibs\/2p301.jar=/gradle_used_by_scope=/=/&lt;cli.System.Collections(IDictionaryEnumerator.class[IDictionaryEnumerator" modifiers="1537" timestamp="1646123473601"/>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/source&lt;it.unibo.radarSystem22.domain.interfaces{IDistance.java[IDistance" modifiers="513" timestamp="1646852471660"/>
-    <typeInfo handle="=it.unibo.radarSystem22.domain/source&lt;it.unibo.radarSystem22.domain.mock{SonarMock.java[SonarMock" modifiers="1" timestamp="1647260284256"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>
