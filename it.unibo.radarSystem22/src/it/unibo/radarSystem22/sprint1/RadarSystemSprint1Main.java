@@ -1,5 +1,5 @@
 package it.unibo.radarSystem22.sprint1;
-
+ 
 import it.unibo.radarSystem22.IApplication;
 import it.unibo.radarSystem22.domain.DeviceFactory;
 import it.unibo.radarSystem22.domain.interfaces.*;
@@ -12,10 +12,10 @@ import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
  */
 
 public class RadarSystemSprint1Main implements IApplication{
-	private IRadarDisplay radar;
-	private ISonar sonar;
-	private ILed  led ;
-	private Controller controller;
+private IRadarDisplay radar;
+private ISonar sonar;
+private ILed  led ;
+private Controller controller;
 
 	@Override
 	public String getName() {	 
@@ -23,6 +23,7 @@ public class RadarSystemSprint1Main implements IApplication{
 	}
 
 	public void setup( String domainConfig, String systemConfig  )  {
+	    BasicUtils.aboutThreads("Before setup ");
 		if( domainConfig != null ) {
 			DomainSystemConfig.setTheConfiguration(domainConfig);
 		}
@@ -30,45 +31,47 @@ public class RadarSystemSprint1Main implements IApplication{
 			RadarSystemConfig.setTheConfiguration(systemConfig);
 		}
 		if( domainConfig == null && systemConfig == null) {
-			DomainSystemConfig.testing      	= false;			
+  			DomainSystemConfig.testing      	= false;			
 			DomainSystemConfig.sonarDelay       = 200;
 			//Su PC
 			DomainSystemConfig.simulation   	= true;
-			DomainSystemConfig.DLIMIT      		= 70;  
 			DomainSystemConfig.ledGui           = true;
-			RadarSystemConfig.RadarGuiRemote    = false;
-			//Su Raspberry (nel file di configurazione)
-			//			DomainSystemConfig.simulation   		= false;
-			//			DomainSystemConfig.DLIMIT      		= 12;  
-			//			DomainSystemConfig.ledGui            = false;
-			//			RadarSystemConfig.RadarGuiRemote    = true;
+			RadarSystemConfig.DLIMIT      		= 70;  
+			RadarSystemConfig.RadarGuiRemote    = false; //se true non attiva radarGui 
+			//Su Raspberry (nei file di configurazione)
+//			DomainSystemConfig.simulation   	= false;
+//			DomainSystemConfig.ledGui           = false;
+//			RadarSystemConfig.DLIMIT      		= 12;  
+//			RadarSystemConfig.RadarGuiRemote    = true;
 		}
-	}
-
-
+ 	}
+	
+ 	
 	@Override
 	public void doJob( String domainConfig, String systemConfig ) {
+	    BasicUtils.aboutThreads("Before doJob | ");
 		setup(domainConfig, systemConfig);
 		configure();
+		BasicUtils.waitTheUser();
 		//start
-		ActionFunction endFun = (n) -> { 
-			System.out.println(n); 
-			terminate(); 
-		};
+	    ActionFunction endFun = (n) -> { 
+	    	System.out.println(n); 
+	    	terminate(); 
+	    };
 		controller.start(endFun, 30);
 	}
-
+	
 	protected void configure() {
-		//Dispositivi di Input
-		sonar      = DeviceFactory.createSonar();
-		//Dispositivi di Output
-		led        = DeviceFactory.createLed();
-		radar      = RadarSystemConfig.RadarGuiRemote ? null : DeviceFactory.createRadarGui();
+	    //Dispositivi di Output
+	    led        = DeviceFactory.createLed();
+	    radar      = RadarSystemConfig.RadarGuiRemote ? null : DeviceFactory.createRadarGui();
 		BasicUtils.aboutThreads("Before Controller creation | ");
-		//Controller
-		controller = Controller.create(led, sonar, radar);	 
+		//Dispositivi di Input
+	    sonar      = DeviceFactory.createSonar();
+//	    //Controller
+	    controller = Controller.create(led, sonar, radar);	 
 	}
-
+  
 	public void terminate() {
 		//Utils.delay(1000);  //For the testing ...
 		BasicUtils.aboutThreads("Before deactivation | ");
@@ -76,20 +79,23 @@ public class RadarSystemSprint1Main implements IApplication{
 		System.exit(0);
 	}
 
-	//Get the system components 
-	public IRadarDisplay getRadarGui() { return radar; }
-	public ILed getLed() { return led; }
-	public ISonar getSonar() { return sonar; }
-	public Controller getController() { return controller; }
-
+//Get the system components 
+ 	public IRadarDisplay getRadarGui() { return radar; }
+ 	public ILed getLed() { return led; }
+ 	public ISonar getSonar() { return sonar; }
+ 	public Controller getController() { return controller; }
+	
 	public static void main( String[] args) throws Exception {
-		//BasicUtils.aboutThreads("At INIT with NO CONFIG files| ");
-		//new RadarSystemSprint1Main().doJob(null,null);
+//		BasicUtils.aboutThreads("At INIT with NO CONFIG files| ");
+//		new RadarSystemSprint1Main().doJob(null,null);
 		
-		//		Per Rasp
-				BasicUtils.aboutThreads("At INIT with  CONFIG files| ");
-				new RadarSystemSprint1Main().doJob("DomainSystemConfig.json","RadarSystemConfig.json");
-
-	}
+ 	     
+	    //Per Rasp:
+	    BasicUtils.aboutThreads("At INIT with CONFIG files| ");
+	    new RadarSystemSprint1Main().doJob(
+	           "DomainSystemConfig.json","RadarSystemConfig.json");
+ 	     		
+		
+ 	}
 
 }
