@@ -34,7 +34,7 @@ public class RadarSysSprint2ControllerOnRaspMain implements IApplication{
 	}
 	
 	public void setup( String domainConfig, String systemConfig )  {
-	    BasicUtils.aboutThreads("Before setup ");
+	    BasicUtils.aboutThreads(getName() + " | Before setup ");
 		if( domainConfig != null ) {
 			DomainSystemConfig.setTheConfiguration(domainConfig);
 		}
@@ -49,7 +49,7 @@ public class RadarSysSprint2ControllerOnRaspMain implements IApplication{
 	    	DomainSystemConfig.ledGui      = true;			
 	    	
 			RadarSystemConfig.RadarGuiRemote    = true;		
-			RadarSystemConfig.serverPort        = 8023;		
+			RadarSystemConfig.serverPort        = 8080;		
 			RadarSystemConfig.hostAddr          = "localhost";
 	    	RadarSystemConfig.DLIMIT            = 75;
 		}
@@ -73,13 +73,13 @@ public class RadarSysSprint2ControllerOnRaspMain implements IApplication{
 	    	terminate(); 
 	    };
 		int d = radar.getCurDistance();
-		ColorsOut.outappl("CURRENT DISTANCE answer=" + d,ColorsOut.MAGENTA );
+		ColorsOut.outappl(getName() + " | CURRENT DISTANCE answer=" + d,ColorsOut.MAGENTA );
 		controller.start(endFun, 30);		
 	}
 	public void terminate() {
 		//Utils.delay(1000);  //For the testing ...
 		int d = radar.getCurDistance();
-		ColorsOut.outappl("CURRENT DISTANCE answer=" + d,ColorsOut.MAGENTA );		
+		ColorsOut.outappl(getName() + " |CURRENT DISTANCE answer=" + d,ColorsOut.MAGENTA );		
 		sonar.deactivate();
 		System.exit(0);
 	}	
@@ -90,6 +90,6 @@ public class RadarSysSprint2ControllerOnRaspMain implements IApplication{
 
 	public static void main( String[] args) throws Exception {
 		BasicUtils.aboutThreads("At INIT with NO CONFIG files| ");
-		new RadarSysSprint2ControllerOnRaspMain().doJob("DomainSystemConfig.json","RadarSystemConfig.json");
+		new RadarSysSprint2ControllerOnRaspMain().doJob(null,null);
   	}
 }

@@ -1,16 +1,12 @@
 package it.unibo.comm2022.tcp;
 
-import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-
 import it.unibo.comm2022.interfaces.IApplMsgHandler;
 import it.unibo.comm2022.interfaces.Interaction2021;
 import it.unibo.comm2022.utils.ColorsOut;
 import it.unibo.comm2022.utils.CommSystemConfig;
-
-// Il server è un thread che rimane sempre attivo
-
+  
 public class TcpServer extends Thread{
 private ServerSocket serversock;
 protected IApplMsgHandler userDefHandler;
@@ -36,8 +32,7 @@ protected boolean stopped = true;
 		  	ColorsOut.out(getName() + " | STARTING ... ", ColorsOut.BLUE  );
 			while( ! stopped ) {
 				//Accept a connection				 
-				//ColorsOut.out(getName() + " | waits on server port=" + port + " serversock=" + serversock );
-				// Aspetta l'arrivo della richiesta
+				//ColorsOut.out(getName() + " | waits on server port=" + port + " serversock=" + serversock );	 
 		 		Socket sock          = serversock.accept();	
 				ColorsOut.out(getName() + " | accepted connection  ", ColorsOut.BLUE   );  
 		 		Interaction2021 conn = new TcpConnection(sock);
@@ -52,7 +47,7 @@ protected boolean stopped = true;
 	public void activate() {
 		if( stopped ) {
 			stopped = false;
-			this.start();  // start() essendo questo un thread invocherà il metodo run() implementato sopra
+			this.start();
 		}//else already activated
 	}
  

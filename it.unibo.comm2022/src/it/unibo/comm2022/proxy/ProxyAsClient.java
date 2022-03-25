@@ -5,6 +5,7 @@ import it.unibo.comm2022.ProtocolType;
 import it.unibo.comm2022.interfaces.Interaction2021;
 import it.unibo.comm2022.utils.ColorsOut;
 import it.unibo.comm2022.tcp.TcpClientSupport;
+import it.unibo.comm2022.udp.giannatempo.UdpClientSupport;
  
 public class ProxyAsClient {
 private Interaction2021 conn; 
@@ -15,8 +16,7 @@ protected ProtocolType protocol ;
  * Realizza la connessione di tipo Interaction2021 (concetto astratto)
  * in modo diverso, a seconda del protocollo indicato (tecnologia specifica)
  */
- 	
-	// entry può essere la porta o il nome a seconda del protocollo (protocolli diversi utilizzano rif diversi)
+ 
 	public ProxyAsClient( String name, String host, String entry, ProtocolType protocol ) {
 		try {
 			ColorsOut.out(name+"  | CREATING entry= "+entry+" protocol=" + protocol, ColorsOut.BLUE );
@@ -36,6 +36,11 @@ protected ProtocolType protocol ;
 				//conn = new TcpConnection( new Socket( host, port ) ) ; //non fa attempts
 				conn = TcpClientSupport.connect(host,  port, 10); //10 = num of attempts
 				ColorsOut.out(name + " |  setConnection "  + conn, ColorsOut.BLUE );		
+				break;
+			}
+			case udp : {
+				int port = Integer.parseInt(entry);
+ 				conn = UdpClientSupport.connect(host,  port );  
 				break;
 			}
 			case coap : {
@@ -68,7 +73,6 @@ protected ProtocolType protocol ;
  		ColorsOut.out( name+"  | sendRequestOnConnection request=" + request + " conn=" + conn, ColorsOut.BLUE );
 		try {
 			String answer = conn.request(request);
-			// bloccante finche non arriva una risposta
 			ColorsOut.out( name+"  | sendRequestOnConnection-answer=" + answer, ColorsOut.BLUE  );
 			return  answer  ;
 			//return CommUtils.getContent( answer );
@@ -85,7 +89,7 @@ protected ProtocolType protocol ;
 	public void close() {
 		try {
 			conn.close();
-			ColorsOut.out(name + " |  CLOSED " + conn  );
+			ColorsOut.out(name + " |  CLOSED " + conn   );
 		} catch (Exception e) {
 			ColorsOut.outerr( name+"  | sendRequestOnConnection ERROR=" + e.getMessage()  );		}
 	}

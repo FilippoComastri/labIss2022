@@ -20,13 +20,13 @@ public class RadarSysSprint2RadarOnPcMain implements IApplication{
 	
 	@Override
 	public void doJob(String domainConfig, String systemConfig ) {
-		setup();
+		setup( );
 		configure();
 		execute();
 	}
 	
-	public void setup()  {	
- 		RadarSystemConfig.serverPort        = 8023;		
+	public void setup(  )  {	
+ 		RadarSystemConfig.serverPort        = 8080;		
  		RadarSystemConfig.hostAddr          = "localhost";
 	}
 	
@@ -51,6 +51,6 @@ public class RadarSysSprint2RadarOnPcMain implements IApplication{
 
 	public static void main( String[] args) throws Exception {
 		BasicUtils.aboutThreads("At INIT with NO CONFIG files| ");
-		new RadarSysSprint2RadarOnPcMain().doJob( "DomainSystemConfig.json","RadarSystemConfig.json" );
+		new RadarSysSprint2RadarOnPcMain().doJob( null,null );
   	}	
 }
