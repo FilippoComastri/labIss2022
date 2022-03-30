@@ -1,7 +1,5 @@
 INDEX VERSION 1.131+C:\Users\comas\Desktop\Universita\1ANNO_MAGISTRALE\IngegneriaSistemiSoftware\labIss2022\.metadata\.plugins\org.eclipse.jdt.core
-3676496882.index
-2229363486.index
-2328269416.index
-1938227348.index
-3666573171.index
 1865797976.index
+2328269416.index
+3666573171.index
+3676496882.index
