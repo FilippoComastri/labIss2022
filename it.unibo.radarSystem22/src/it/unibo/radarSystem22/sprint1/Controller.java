@@ -44,11 +44,13 @@ private ActionFunction endFun;
 				try {
 					BasicUtils.aboutThreads("Controller activate | ");
   					boolean sonarActive = sonar.isActive();
+  					System.out.println("DLIMIT = "+RadarSystemConfig.DLIMIT);
 					if( sonarActive ) {
 						for( int i=1; i<=limit; i++) {
 						//while( sonar.isActive() ) {
 							IDistance d = sonar.getDistance(); //potrebbe essere bloccante
-							ColorsOut.outappl("Controller | d="+d +" i=" + i, ColorsOut.GREEN  );
+							System.out.println("Controller | d="+d +" i=" + i);
+							//ColorsOut.outappl("Controller | d="+d +" i=" + i, ColorsOut.GREEN  );
 							if( radar != null) RadarGuiUsecase.doUseCase( radar,d  );	//
 	 						LedAlarmUsecase.doUseCase( led,  d  );   
 	 						BasicUtils.delay(DomainSystemConfig.sonarDelay);  //Al ritmo della generazione ...

@@ -73,11 +73,13 @@ public class RadarSystemMainDevsCtxOnRasp implements IApplication{
 	
 	protected void execute() {		
 		contextServer.activate();
+		BasicUtils.aboutThreads(getName() + " | After start ");
 	}
 	
 	public static void main( String[] args) throws Exception {
 		//ColorsOut.out("Please set RadarSystemConfig.pcHostAddr in RadarSystemConfig.json");
-		new RadarSystemMainDevsCtxOnRasp().doJob("DomainSystemConfig.json","RadarSystemConfig.json");
+		//new RadarSystemMainDevsCtxOnRasp().doJob("DomainSystemConfig.json","RadarSystemConfig.json");
+		new RadarSystemMainDevsCtxOnRasp().doJob(null,null);
  	}
 
 }

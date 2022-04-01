@@ -16,7 +16,8 @@ public class DomainSystemConfig {
 	public static int sonarDistanceMax    =  150;     
 	public static boolean sonarObservable =  false;     
 	public static int DLIMIT              =  15;     
-	public static int testingDistance     =  DLIMIT - 2;     
+	public static int testingDistance     =  DLIMIT - 2; 
+	public static int limit_observable    = 1 ;
     
 	public static boolean tracing         = false;	
 	public static boolean testing         = false;			
@@ -49,6 +50,7 @@ public class DomainSystemConfig {
 	        tracing          = object.getBoolean("tracing");
 	        testing          = object.getBoolean("testing");
 	        ledGui			 = object.getBoolean("ledGui");
+	        limit_observable = object.getInt("limit_observable");
 	        
  	        
 		} catch (FileNotFoundException e) {

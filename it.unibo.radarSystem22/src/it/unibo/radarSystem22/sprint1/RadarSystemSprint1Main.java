@@ -35,7 +35,7 @@ private Controller controller;
 			DomainSystemConfig.sonarDelay       = 200;
 			//Su PC
 			DomainSystemConfig.simulation   	= true;
-			DomainSystemConfig.DLIMIT      		= 70;  
+			DomainSystemConfig.DLIMIT      		= 50;  
 			DomainSystemConfig.ledGui           = true;
 			RadarSystemConfig.RadarGuiRemote    = false; //se true non attiva radarGui
 		//Su Raspberry (nei file di configurazione)

@@ -13,7 +13,7 @@ import it.unibo.radarSystem22.domain.utils.ColorsOut;
 public class RadarSystemConfig {
  	public static boolean tracing         = false;	
 	public static boolean testing         = false;			
-	public static int DLIMIT              =  15;     	
+	public static int DLIMIT              =  45;     	
 	public static boolean  RadarGuiRemote = false;
 	
 //Aggiunte dello SPRINT2	

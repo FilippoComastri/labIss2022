@@ -17,12 +17,10 @@ class SonarObserverFortesting implements IObserver{
 	private boolean oneShot = false;
 	private int v0          = -1;
 	private int delta       =  1;
-//	private ISonarObservable sonar;
 	
-	public SonarObserverFortesting(String name, ISonarObservable sonar, boolean oneShot) {
+	public SonarObserverFortesting(String name, boolean oneShot) {
 		this.name    = name;
-//		this.sonar   = sonar;
-		this.oneShot = oneShot;
+		this.oneShot = oneShot ;
 	}
 	@Override
 	public void update(Observable source, Object data) {
@@ -46,7 +44,6 @@ class SonarObserverFortesting implements IObserver{
  				int vexpectedMax = v0+delta;
  				assertTrue(  value <= vexpectedMax && value >= vexpectedMin );
  				v0 = value;			 
- 				//if( v0 == 30 && name.equals("obs1")) sonar.unregister(this);
  			 }
  		 }
 	}
