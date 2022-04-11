@@ -8,6 +8,7 @@ import unibo.actor22comm.utils.ColorsOut;
 
 public class ApplData {
 	public static final String ledName        = "led";
+	public static final String sonarName	  = "sonar";
 	public static final String controllerName = "controller";
 	public static final String observerName   = "observer";
 
@@ -31,6 +32,9 @@ public class ApplData {
 	public static final  IApplMessage activateCrtl = buildDispatch("main", "cmd", cmdActivate, controllerName);
 	
 	public static final  IApplMessage endWorkEvent = buildEvent(controllerName, evEndWork, evEndWork );
+	
+	public static final IApplMessage activateSonar =  buildDispatch(ApplData.controllerName, "cmd", ApplData.cmdActivate, ApplData.sonarName);
+	public static final IApplMessage deactivateSonar =  buildDispatch(ApplData.controllerName, "cmd", ApplData.cmdDectivate, ApplData.sonarName);
 	
 	
 //String MSGID, String MSGTYPE, String SENDER, String RECEIVER, String CONTENT, String SEQNUM

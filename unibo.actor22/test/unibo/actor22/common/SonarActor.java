@@ -12,7 +12,7 @@ import unibo.actor22comm.utils.CommUtils;
 public class SonarActor extends QakActor22{
 
 	private ISonar sonar;
-	
+
 	public SonarActor(String name) {
 		super(name);
 		sonar = DeviceFactory.createSonar();
@@ -30,30 +30,31 @@ public class SonarActor extends QakActor22{
 		String msgReq = msg.msgContent();
 		//ColorsOut.out( getName()  + " | elabRequest " + msgCmd, ColorsOut.CYAN);
 		switch( msgReq ) {
-			case ApplData.reqIsActiveSonar  :{
-				boolean b = sonar.isActive();
-				IApplMessage reply = MsgUtil.buildReply(getName(), ApplData.reqIsActiveSonar, ""+b, msg.msgSender());
-				ColorsOut.out( getName()  + " | reply= " + reply, ColorsOut.CYAN);
- 				sendReply(msg, reply );				
-				break;
-			}
-			case ApplData.reqDistanceSonar :{
-				IDistance d = sonar.getDistance();
-				IApplMessage reply = MsgUtil.buildReply(getName(), ApplData.reqIsActiveSonar, ""+d.getVal(), msg.msgSender());
-				ColorsOut.out( getName()  + " | reply= " + reply, ColorsOut.CYAN);
-				sendReply(msg, reply );				
-				break;
-			}
- 			default: ColorsOut.outerr(getName()  + " | unknown " + msgReq);
+		case ApplData.reqIsActiveSonar  :{
+			boolean b = sonar.isActive();
+			IApplMessage reply = MsgUtil.buildReply(getName(), ApplData.reqIsActiveSonar, ""+b, msg.msgSender());
+			ColorsOut.out( getName()  + " | reply= " + reply, ColorsOut.CYAN);
+			sendReply(msg, reply );				
+			break;
+		}
+		case ApplData.reqDistanceSonar :{
+			IDistance d = sonar.getDistance();
+			System.out.println("SonarActor | msg content "+d.getVal());
+			IApplMessage reply = MsgUtil.buildReply(getName(), ApplData.reqDistanceSonar, ""+d.getVal(), msg.msgSender());
+			ColorsOut.out( getName()  + " | reply= " + reply, ColorsOut.CYAN);
+			sendReply(msg, reply );				
+			break;
+		}
+		default: ColorsOut.outerr(getName()  + " | unknown " + msgReq);
 		}
 	}
 
 	protected void elabCmd(IApplMessage msg) {
 		String msgCmd = msg.msgContent();
- 		switch( msgCmd ) {
-			case ApplData.cmdActivate  : sonar.activate();break;
-			case ApplData.cmdDectivate : sonar.deactivate();break;
-			default: ColorsOut.outerr(getName()  + " | unknown " + msgCmd);
+		switch( msgCmd ) {
+		case ApplData.cmdActivate  : sonar.activate();break;
+		case ApplData.cmdDectivate : sonar.deactivate();break;
+		default: ColorsOut.outerr(getName()  + " | unknown " + msgCmd);
 		}
 	}
 
