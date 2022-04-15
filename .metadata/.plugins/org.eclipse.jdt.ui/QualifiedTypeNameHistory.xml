@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.junit.Before"/>
     <fullyQualifiedTypeName name="org.junit.After"/>
-    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ILed"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.mock.LedMock"/>
     <fullyQualifiedTypeName name="org.junit.Test"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.models.LedModel"/>
@@ -17,8 +16,6 @@
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.IApplication"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonarObservable"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.sprint1.ControllerObserver"/>
-    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.DeviceFactory"/>
-    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonar"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IDistance"/>
     <fullyQualifiedTypeName name="java.util.Observer"/>
     <fullyQualifiedTypeName name="java.util.Observable"/>
@@ -37,4 +34,8 @@
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IRadarDisplay"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.concrete.RadarDisplay"/>
     <fullyQualifiedTypeName name="unibo.actor22comm.interfaces.ActionFun"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.DeviceFactory"/>
+    <fullyQualifiedTypeName name="unibo.actor22.local.RSActor22onPC.ControllerActorLedSonar"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ILed"/>
+    <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonar"/>
 </qualifiedTypeNameHistroy>
