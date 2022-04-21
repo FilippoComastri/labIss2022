@@ -3,7 +3,9 @@ package unibo.actor22.distrib.RSActor22OnRasp;
 import it.unibo.kactor.IApplMessage;
 import it.unibo.radarSystem22.domain.utils.BasicUtils;
 import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
+import unibo.actor22.Qak22Context;
 import unibo.actor22.Qak22Util;
+import unibo.actor22.annotations.ActorLocal;
 import unibo.actor22.common.ApplData;
 import unibo.actor22.common.ControllerActorLedSonar;
 import unibo.actor22.common.LedActor;
@@ -14,6 +16,18 @@ import unibo.actor22comm.interfaces.ActionFun;
 import unibo.actor22comm.utils.ColorsOut;
 import unibo.actor22comm.utils.CommSystemConfig;
 import unibo.actor22comm.utils.CommUtils;
+
+//WITH ANNOTATIONS
+@ActorLocal(name = {
+		ApplData.controllerName, 
+		ApplData.ledName, 
+		ApplData.sonarName 
+		}, 
+		implement = {
+				unibo.actor22.common.ControllerActorLedSonar.class, 
+				unibo.actor22.common.LedActor.class, 
+				unibo.actor22.common.SonarActor.class 
+				})
 
 public class SingleContextWithAll {
 	private LedActor led;
@@ -58,10 +72,16 @@ public class SingleContextWithAll {
 		
 		protected void configure() {
 			ctx = new EnablerContextForActors( "ctx",ApplData.ctxPort,ApplData.protocol);
-	 		this.led = new LedActor( ApplData.ledName );
-	 		this.sonar = new SonarActor (ApplData.sonarName);
-	 		ActionFun endFun = (n) -> { System.out.println(n); terminate(); };
-	 		controller = new ControllerActorLedSonar(ApplData.controllerName,90,endFun,false);
+			
+			ActionFun endFun = (n) -> { System.out.println(n); terminate(); };
+//			// WITHOUT ANNOTATIONS
+//	 		this.led = new LedActor( ApplData.ledName );
+//	 		this.sonar = new SonarActor (ApplData.sonarName);
+//	 		controller = new ControllerActorLedSonar(ApplData.controllerName,90,endFun,false);
+			
+			// WITH ANNOTATIONS
+			Qak22Context.myHandleLocalActorActorDecl(this,90, endFun, true);
+		
 	   	}
 		
 		protected void execute() {
@@ -79,7 +99,8 @@ public class SingleContextWithAll {
 
 		public static void main( String[] args) {
 			CommUtils.aboutThreads("Before start - ");
-			new SingleContextWithAll().doJob("DomainSystemConfig.json");
+			//new SingleContextWithAll().doJob("DomainSystemConfig.json");
+			new SingleContextWithAll().doJob(null);
 			CommUtils.aboutThreads("Before end - ");
 		}
 }

@@ -3,6 +3,8 @@ package unibo.actor22.distrib.RSActor22Distrib;
 import it.unibo.radarSystem22.domain.interfaces.ILed;
 import it.unibo.radarSystem22.domain.interfaces.ISonar;
 import it.unibo.radarSystem22.domain.utils.DomainSystemConfig;
+import unibo.actor22.Qak22Context;
+import unibo.actor22.annotations.ActorLocal;
 import unibo.actor22.common.ApplData;
 import unibo.actor22.common.ControllerActorLedSonar;
 import unibo.actor22.common.LedActor;
@@ -13,6 +15,15 @@ import unibo.actor22comm.interfaces.ActionFun;
 import unibo.actor22comm.utils.ColorsOut;
 import unibo.actor22comm.utils.CommSystemConfig;
 import unibo.actor22comm.utils.CommUtils;
+
+@ActorLocal(name = {
+		ApplData.ledName, 
+		ApplData.sonarName 
+		}, 
+		implement = {
+				unibo.actor22.common.LedActor.class, 
+				unibo.actor22.common.SonarActor.class 
+				})
 
 public class LedSonarOnRasp {
 	
@@ -50,8 +61,13 @@ public class LedSonarOnRasp {
 	
 	protected void configure() {
 		this.ctx = new EnablerContextForActors( "ctx",ApplData.ctxPort,ApplData.protocol);
- 		this.led = new LedActor( ApplData.ledName );
- 		this.sonar = new SonarActor (ApplData.sonarName);
+ 		
+		//WITHOUT ANNOTATIONS
+//		this.led = new LedActor( ApplData.ledName );
+// 		this.sonar = new SonarActor (ApplData.sonarName);
+		
+		//WITH ANNOTATIONS
+		Qak22Context.handleLocalActorDecl(this);
    	}
 	
 	protected void execute() {

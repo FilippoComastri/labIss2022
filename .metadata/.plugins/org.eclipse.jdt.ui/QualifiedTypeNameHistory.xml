@@ -23,19 +23,21 @@
     <fullyQualifiedTypeName name="cli.System.Collections.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="unibo.actor22.common.SonarActor"/>
     <fullyQualifiedTypeName name="unibo.actor22.common.ControllerActor"/>
     <fullyQualifiedTypeName name="unibo.actor22.QakActor22"/>
-    <fullyQualifiedTypeName name="unibo.actor22.common.ControllerActorLedSonar"/>
     <fullyQualifiedTypeName name="unibo.actor22.common.ApplData"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.utils.DomainSystemConfig"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.Distance"/>
     <fullyQualifiedTypeName name="unibo.actor22comm.utils.CommUtils"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.IRadarDisplay"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.concrete.RadarDisplay"/>
-    <fullyQualifiedTypeName name="unibo.actor22comm.interfaces.ActionFun"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.DeviceFactory"/>
     <fullyQualifiedTypeName name="unibo.actor22.local.RSActor22onPC.ControllerActorLedSonar"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ILed"/>
     <fullyQualifiedTypeName name="it.unibo.radarSystem22.domain.interfaces.ISonar"/>
+    <fullyQualifiedTypeName name="unibo.actor22comm.interfaces.ActionFun"/>
+    <fullyQualifiedTypeName name="unibo.actor22.common.LedActor"/>
+    <fullyQualifiedTypeName name="unibo.actor22.common.SonarActor"/>
+    <fullyQualifiedTypeName name="unibo.actor22.common.ControllerActorLedSonar"/>
+    <fullyQualifiedTypeName name="unibo.actor22.Qak22Context"/>
 </qualifiedTypeNameHistroy>

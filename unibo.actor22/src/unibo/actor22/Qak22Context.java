@@ -6,9 +6,11 @@ import java.util.HashMap;
 import it.unibo.kactor.IApplMessage;
 import unibo.actor22.annotations.ActorLocal;
 import unibo.actor22.annotations.ActorRemote;
+import unibo.actor22.common.ControllerActorLedSonar;
 import unibo.actor22comm.ProtocolInfo;
 import unibo.actor22comm.ProtocolType;
 import unibo.actor22comm.events.EventMsgHandler;
+import unibo.actor22comm.interfaces.ActionFun;
 import unibo.actor22comm.proxy.ProxyAsClient;
 import unibo.actor22comm.utils.ColorsOut;
 import unibo.actor22comm.utils.CommUtils;
@@ -76,6 +78,31 @@ public class Qak22Context {
         	 }
          }
     }
+    
+    public static void myHandleLocalActorActorDecl(Object element, int limit, ActionFun endFun, boolean radar) {
+    	 Class<?> clazz            = element.getClass();
+         Annotation[] annotations  = clazz.getAnnotations();
+          for (Annotation annot : annotations) {
+         	 if (annot instanceof ActorLocal) {
+         		 ActorLocal a = (ActorLocal) annot;
+         		 for( int i=0; i<a.name().length; i++) {
+         			 String name     = a.name()[i];
+         			 Class  impl     = a.implement()[i];
+             		 try {
+             			 if (impl==unibo.actor22.common.ControllerActorLedSonar.class)
+             				 new ControllerActorLedSonar(name, limit, endFun, radar);
+             			 else
+             				 impl.getConstructor( String.class ).newInstance( name );
+ 	            		 ColorsOut.outappl( "Qak22Context | CREATED LOCAL ACTOR: "+ name, ColorsOut.MAGENTA );
+ 					} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+ 							| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+  						e.printStackTrace();
+ 					}
+          		 }
+         	 }
+          }
+    }
+    
     public static void handleRemoteActorDecl(Object element) {
         Class<?> clazz            = element.getClass();
         Annotation[] annotations  = clazz.getAnnotations();
