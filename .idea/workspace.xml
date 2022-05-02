@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eded8d0a-9511-4910-bffb-58b298270729" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1865797976.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/DomainSystemConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/DomainSystemConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/RadarSystemConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/RadarSystemConfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/libs/it.unibo.radarSystem22.domain-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/libs/it.unibo.radarSystem22.domain-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/src/it/unibo/radarSystem22/sprint1/RadarSystemConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/src/it/unibo/radarSystem22/sprint1/RadarSystemConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/src/it/unibo/radarSystem22/sprint1/RadarSystemSprint1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/src/it/unibo/radarSystem22/sprint1/RadarSystemSprint1Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/src/it/unibo/radarSystem22/sprint1/usecases/LedAlarmUsecase.java" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/src/it/unibo/radarSystem22/sprint1/usecases/LedAlarmUsecase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/test/it/unibo/radarSystem22/sprint1/TestSystemAtSprint1.java" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.radarSystem22/test/it/unibo/radarSystem22/sprint1/TestSystemAtSprint1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/userDocs/img/ArchLogicaOOP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/userDocs/img/myphoto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/it.unibo.radarSystem22/userDocs/radarSytem22.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/SceneManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/SceneManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/SocketIO.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/SocketIO.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/controls/PlayerControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/controls/PlayerControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/controls/PlayerControlsMirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/controls/PlayerControlsMirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/sceneConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/WebGLScene/sceneConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/src/WebpageServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/src/WebpageServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/src/experiments2021/clientWEnv.js" beforeDir="false" afterPath="$PROJECT_DIR$/it.unibo.virtualRobot2020/node/WEnv/server/src/experiments2021/clientWEnv.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unibo.wenvUsage22/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/unibo.wenvUsage22/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unibo.wenvUsage22/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/unibo.wenvUsage22/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unibo.wenvUsage22/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/unibo.wenvUsage22/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unibo.wenvUsage22/resources/python/virtualrobotCaller.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/unibo.wenvUsage22/resources/python/virtualrobotCaller.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -63,7 +52,11 @@
       <option name="presentableId" value="Default" />
       <updated>1647947086428</updated>
       <workItem from="1647947086429" duration="5000" />
+      <workItem from="1650537337561" duration="850000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
