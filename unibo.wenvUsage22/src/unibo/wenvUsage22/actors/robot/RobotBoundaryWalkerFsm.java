@@ -12,9 +12,11 @@ import unibo.wenvUsage22.common.VRobotMoves;
 
 public  class RobotBoundaryWalkerFsm extends QakActor22Fsm {  
 	private Interaction2021 conn;
+	private int numIter ;
 	
 	public RobotBoundaryWalkerFsm(String name) {
 		super(name);
+		this.numIter = 0 ;
  	}
 	
   	 
@@ -56,8 +58,10 @@ public  class RobotBoundaryWalkerFsm extends QakActor22Fsm {
 					VRobotMoves.step(getName(),conn);
 					addTransition( "checkResult",  "wsEvent" );
 				}else {
-					outInfo("collision?" ); 
+					VRobotMoves.turnLeft(getName(), conn);
+					addTransition("turnedLeft","wsEvent");
 				}
+				nextState();
  			}			
 		});
 		
@@ -66,8 +70,23 @@ public  class RobotBoundaryWalkerFsm extends QakActor22Fsm {
 			@Override
 			public void run(IApplMessage msg) {
 				outInfo(""+msg);
-				outInfo("BYE" );
-				addTransition( "turnedLeft", ApplData.haltSysCmdId );
+				numIter ++ ;
+				System.out.println("Iterazioni "+numIter);
+				if (numIter < 4) {
+					VRobotMoves.step(getName(),conn);
+					addTransition( "checkResult",  "wsEvent" );
+					nextState();
+				} else {
+					System.out.println("BYE");
+				}
+  			}			
+		});
+		
+		declareState("end", new StateActionFun() {
+			@Override
+			public void run(IApplMessage msg) {
+				outInfo(""+msg);
+				System.out.println("BYE");
   			}			
 		});
 	}
